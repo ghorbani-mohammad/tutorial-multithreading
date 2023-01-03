@@ -16,4 +16,15 @@ def g():
     return random.choice([2, 4, 6, 8, 10])
 
 
-print(max(f(), g()))
+from threading import Thread
+
+
+threads = [Thread(target=f), Thread(target=g)]
+
+# f and g run in separate threads
+for thread in threads:
+    thread.start()
+
+# Wait until both f and g have finished
+for thread in threads:
+    thread.join()
