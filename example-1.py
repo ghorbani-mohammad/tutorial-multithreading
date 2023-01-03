@@ -7,13 +7,20 @@ import random
 
 
 def f():
-    time.sleep(5)
-    return random.choice([1, 3, 5, 7, 9])
+    value = random.choice([1, 3, 5, 7, 9])
+    print(f"value from f: {value}")
+    time.sleep(value)
+    return value
 
 
 def g():
-    time.sleep(8)
-    return random.choice([2, 4, 6, 8, 10])
+    value = random.choice([2, 4, 6, 8, 10])
+    print(f"value from g: {value}")
+    time.sleep(value)
+    return value
+
+
+print(max(f(), g()))
 
 
 from threading import Thread
@@ -28,3 +35,25 @@ for thread in threads:
 # Wait until both f and g have finished
 for thread in threads:
     thread.join()
+
+
+class ThreadWithReturnValue(Thread):
+    def __init__(self, group=None, target=None, name=None, args=(), kwargs={}):
+        Thread.__init__(self, group, target, name, args, kwargs)
+        self._return = None
+
+    def run(self):
+        if self._target is not None:
+            self._return = self._target(*self._args, **self._kwargs)
+
+    def join(self, *args):
+        Thread.join(self, *args)
+        return self._return
+
+
+threads = [ThreadWithReturnValue(target=f), ThreadWithReturnValue(target=g)]
+# f and g run in separate threads
+for thread in threads:
+    thread.start()
+
+print(max(threads[0].join(), threads[1].join()))
