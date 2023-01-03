@@ -3,10 +3,10 @@
 Multithreading is an advanced topic in all programming languages.
 In this tutorial I'm going to implement some examples to have better understanding of multithreading programming.
 
-#### List of patterns:
+#### List of examples:
 - **example-1**: running two function in concurrent manner
-    - **description:** Suppose we have two function f and g. These functions return some integer value at the end of their
+    - **Description:** Suppose we have two function f and g. These functions return some integer value at the end of their
 long running. What we want to do is running these two function simultaneously instead of running first f and then g. 
 - **example-2**: using concurrent.futures package
-    - **description:** There is a module named concurrent.features provide an integrated interface for working with
+    - **Description:** There is a module named concurrent.features provide an integrated interface for working with
     multithreading and multiprocessing. It seems is better to use this module because of its integrated interface.
