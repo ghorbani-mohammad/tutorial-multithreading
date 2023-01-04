@@ -12,7 +12,11 @@ We run programs (in our case python codes) in process environments. For example 
 - It's a solution for race conditions in multithreading
 - It's a known issue with Python
 
-### 🤕 So we don't have multithreading in Python?
+### 🤕 So we don't have a real multithreading in Python?
+- Maybe! But the point is that when one thread is idly waiting, another thread can continue executing code
+- In I/O tasks we have lots of waiting
+- This is why multithreading in Python is perfect for I/O bound tasks
+- Tasks like making api calls, reading or writing into files or databases
 
 ### 📝 List of examples:
 - **🔹Example 1**: running two function in concurrent manner
