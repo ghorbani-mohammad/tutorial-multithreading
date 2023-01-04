@@ -7,6 +7,10 @@ In this tutorial I'm going to implement some examples to have better understandi
 We run programs (in our case python codes) in process environments. For example if you run `htop` command in your linux's terminal you will see lots of processes.Each process can have multiple threads. So multithreading means that a process runs its code with multiple threads.
 
 ### What is GIL?
+- Stands for Global Interpreter Lock
+- Prevent multiple threads running simultaneously in a process
+- It's a solution for race conditions in multithreading
+- It's a known issue with Python
 
 ### So we don't have multithreading in Python?
 
