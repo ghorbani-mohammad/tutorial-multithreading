@@ -12,9 +12,9 @@ We run programs (in our case python codes) in process environments. For example 
 - It's a solution for race conditions in multithreading
 - It's a known issue with Python
 
-### 🤔 So we don't have multithreading in Python?
+### 🤕 So we don't have multithreading in Python?
 
-### List of examples:
+### 📝 List of examples:
 - **🔹Example 1**: running two function in concurrent manner
     - **✅ Description:** Suppose we have two functions **f** and **g**. These functions return some integer value at the end of their
 long running. What we want to do is running these two function simultaneously instead of running first f and then g. 
