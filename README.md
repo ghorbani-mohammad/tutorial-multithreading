@@ -1,4 +1,4 @@
-## Learning Multithreading in Python 🐍
+## Learning Multithreading in Python 🐍❤️🔥
 
 Multithreading is an advanced topic in all programming languages.
 In this tutorial I'm going to implement some examples to have better understanding of multithreading programming.
