@@ -36,6 +36,7 @@ for thread in threads:
     thread.join()
 # or print(max(threads[0].join(), threads[1].join()))
 
+
 # At above implementation we have a limit.
 # The limit is that we can't get return values from threads
 # So lets implement in another way in which we can get return values from threads
